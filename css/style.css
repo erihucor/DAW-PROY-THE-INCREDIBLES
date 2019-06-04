@@ -130,7 +130,7 @@ header .navbar-brand.absolute {
 }
 
 header .navbar-brand span {
-  color: #f73471;
+  color: #6e0572;
 }
 
 @media (min-width: 768px) {
@@ -203,12 +203,12 @@ header .navbar .dropdown-menu:before {
 }
 
 header .navbar .dropdown-menu .dropdown-item:hover {
-  background: #f73471;
+  background: #6e0572;
   color: #fff;
 }
 
 header .navbar .dropdown-menu .dropdown-item.active {
-  background: #f73471;
+  background: #6e0572;
   color: #fff;
 }
 
@@ -218,7 +218,7 @@ header .navbar .dropdown-menu a {
 }
 
 header .navbar .cta-btn a {
-  background: #f73471;
+  background: #6e0572;
   color: #fff !important;
   text-transform: uppercase;
   padding: 15px 20px !important;
@@ -231,7 +231,7 @@ header .navbar .cta-btn a {
 
 header .navbar .cta-btn a:hover {
   background: #fff;
-  color: #f73471 !important;
+  color: #6e0572 !important;
   -webkit-box-shadow: 2px 0 30px -5px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 0 30px -5px rgba(0, 0, 0, 0.2);
 }
@@ -267,7 +267,7 @@ header .navbar .cta-btn a:hover {
 
 .section-heading .small-sub-heading {
   font-size: 14px;
-  color: #f73471;
+  color: #6e0572;
 }
 
 .blog .media h3 {
@@ -343,7 +343,7 @@ header .navbar .cta-btn a:hover {
   font-size: 20px;
   color: #fff;
   display: inline-block;
-  background: #f73471;
+  background: #6e0572;
   width: 100px;
   height: 100px;
   line-height: 100px;
@@ -381,7 +381,7 @@ header .navbar .cta-btn a:hover {
 .heading-wrap h2:before {
   width: 80px;
   height: 2px;
-  background: #f73471;
+  background: #6e0572;
   content: "";
   position: absolute;
   top: 0;
@@ -482,7 +482,7 @@ header .navbar .cta-btn a:hover {
 
 .custom-icon {
   font-size: 70px;
-  color: #f73471;
+  color: #6e0572;
 }
 
 /* Owl Carousel */
@@ -564,7 +564,7 @@ header .navbar .cta-btn a:hover {
 }
 
 .owl-carousel.centernonloop .owl-dots .owl-dot.active {
-  background: #f73471;
+  background: #6e0572;
 }
 
 .owl-carousel.centernonloop .owl-dots .owl-dot:active, .owl-carousel.centernonloop .owl-dots .owl-dot:focus {
@@ -826,7 +826,7 @@ header .navbar .cta-btn a:hover {
 }
 
 .form-wrap.primary {
-  background: #f73471;
+  background: #6e0572;
 }
 
 .form-wrap.warning {
@@ -880,7 +880,7 @@ header .navbar .cta-btn a:hover {
   position: relative;
   width: 0px;
   font-size: 30px;
-  color: #f73471;
+  color: #6e0572;
 }
 
 .load-more {
@@ -893,7 +893,7 @@ header .navbar .cta-btn a:hover {
 }
 
 .load-more:hover {
-  background: #f73471;
+  background: #6e0572;
   color: #fff;
 }
 
@@ -933,7 +933,7 @@ header .navbar .cta-btn a:hover {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  background: #f73471;
+  background: #6e0572;
 }
 
 .text-black {
@@ -977,7 +977,7 @@ header .navbar .cta-btn a:hover {
   -ms-transform: scale(1.05);
   transform: scale(1.05);
   z-index: 2;
-  border-bottom: 10px solid #f73471;
+  border-bottom: 10px solid #6e0572;
 }
 
 .media-custom {
@@ -1077,7 +1077,7 @@ header .navbar .cta-btn a:hover {
 
 .site-footer {
   padding: 5em 0;
-  background: skyblue;
+  background: -webkit-linear-gradient(black, blue); 
   color: rgba(255, 255, 255, 2);
 }
 
@@ -1086,7 +1086,7 @@ header .navbar .cta-btn a:hover {
 }
 
 .site-footer a {
-  color: black;
+  color: white;
   border-bottom: 1px solid transparent;
 }
 
