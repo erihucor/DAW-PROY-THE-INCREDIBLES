@@ -56,6 +56,8 @@ textarea.form-control {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: .2em;
+  background-color: blue;/*Sobreescrito*/
+  border-color: blue;
 }
 
 .btn.btn-primary {
@@ -81,9 +83,15 @@ textarea.form-control {
   color: #fff;
 }
 
+.btn.btn-outline-blue {
+  border-width: 2px;
+  border-color: blue;
+  color: white;
+}
+
 .btn.btn-outline-white {
   border-width: 2px;
-  border-color: #fff;
+  /*border-color: #fff;*/
   color: #fff;
 }
 
@@ -218,7 +226,7 @@ header .navbar .dropdown-menu a {
 }
 
 header .navbar .cta-btn a {
-  background: #6e0572;
+  background: blue;
   color: #fff !important;
   text-transform: uppercase;
   padding: 15px 20px !important;
@@ -343,7 +351,7 @@ header .navbar .cta-btn a:hover {
   font-size: 20px;
   color: #fff;
   display: inline-block;
-  background: #6e0572;
+  background: blue;/*aqua: #00FFFF*/
   width: 100px;
   height: 100px;
   line-height: 100px;
@@ -381,7 +389,7 @@ header .navbar .cta-btn a:hover {
 .heading-wrap h2:before {
   width: 80px;
   height: 2px;
-  background: #6e0572;
+  background: blue;/*sobreescrito*/
   content: "";
   position: absolute;
   top: 0;
@@ -560,11 +568,11 @@ header .navbar .cta-btn a:hover {
 }
 
 .owl-carousel.centernonloop .owl-dots .owl-dot {
-  background: #ccc;
+  background: #ccc;/*sobreescrito*/
 }
 
 .owl-carousel.centernonloop .owl-dots .owl-dot.active {
-  background: #6e0572;
+  background: blue;/*sobreescrito*/
 }
 
 .owl-carousel.centernonloop .owl-dots .owl-dot:active, .owl-carousel.centernonloop .owl-dots .owl-dot:focus {
@@ -880,7 +888,7 @@ header .navbar .cta-btn a:hover {
   position: relative;
   width: 0px;
   font-size: 30px;
-  color: #6e0572;
+  color: blue;/*sobreescrito*/
 }
 
 .load-more {
