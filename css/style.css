@@ -415,6 +415,58 @@ header .navbar .cta-btn a:hover {
   color: #f7f7f7;
   text-transform: uppercase;
 }
+ .heading-wrap .back-text1 {
+  z-index: 0;
+  line-height: 1;
+  top: .2em;
+  left: 50%;
+  margin-top: -50px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-weight: 800;
+  font-size: 150px;
+  position: absolute;
+  width: 100%;
+  color: #f7f7f7;
+  text-transform: uppercase;
+}
+ .heading-wrap .back-text2 {
+  z-index: 0;
+  line-height: 1;
+  top: .3em;
+  left: 50%;
+  margin-top: -50px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-weight: 800;
+  font-size: 125px;
+  position: absolute;
+  width: 100%;
+  color: #f7f7f7;
+  text-transform: uppercase;
+}
+
+ .heading-wrap .back-text3 {
+  z-index: 0;
+  line-height: 1;
+  top: .2em;
+  left: 50%;
+  margin-top: -50px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-weight: 800;
+  font-size: 150px;
+  position: absolute;
+  width: 100%;
+  color: #f7f7f7;
+  text-transform: uppercase;
+}
+
+
+
 
 .heading-wrap .back-text-dark {
   color: #e3e3e3 !important;
@@ -1085,7 +1137,8 @@ header .navbar .cta-btn a:hover {
 
 .site-footer {
   padding: 5em 0;
-  background: -webkit-linear-gradient(black, blue); 
+ /* background: -webkit-linear-gradient(darkblue, blue); */
+  background-color: darkblue;
   color: rgba(255, 255, 255, 2);
 }
 
