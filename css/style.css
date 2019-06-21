@@ -41,6 +41,7 @@ h1, h2, h3, h4, h5 {
 
 .inline-box{
   display: inline-block;
+  text-align: justify;
 }
 
 .btn, .form-control {
@@ -819,7 +820,7 @@ header .navbar .cta-btn a:hover {
 }
 
 .section {
-  padding: 7em 0;
+  padding: 0em 0;
 }
 
 .section-subscribe {
