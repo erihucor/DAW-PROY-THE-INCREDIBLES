@@ -123,8 +123,10 @@ header {
 
 header .navbar-brand {
   text-transform: uppercase;
-  letter-spacing: .2em;
+  letter-spacing: .1em;
   font-weight: 400;
+  font-size: 1rem;
+
 }
 
 header .navbar-brand.absolute {
@@ -138,7 +140,7 @@ header .navbar-brand.absolute {
 }
 
 header .navbar-brand span {
-  color: #6e0572;
+  color: #ced4da;
 }
 
 @media (min-width: 768px) {
@@ -1136,10 +1138,14 @@ header .navbar .cta-btn a:hover {
 }
 
 .site-footer {
-  padding: 5em 0;
+  padding: 2em 0;
  /* background: -webkit-linear-gradient(darkblue, blue); */
   background-color: darkblue;
   color: rgba(255, 255, 255, 2);
+}
+
+.site-footer div:first-child{
+  margin-bottom: 1rem !important;
 }
 
 .site-footer p:last-child {

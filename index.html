@@ -1,4 +1,4 @@
-+<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Distribuidora Matute</title>
@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
+    <link rel="stylesheet" type="text/css" href="css/introjs.css" />
 
     <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
-
+    <script type="text/javascript" src="js/intro.js"></script>   
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -24,9 +24,9 @@
     <header role="banner">
       
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container">
+        <div class="container" >
           <div id="logo"><img src="images/logo.PNG" width="60" height="60"></div>
-          <a class="navbar-brand" href="index.html">YAKU<span></span></a>
+          <a class="navbar-brand" href="index.html" data-position="bottom" data-intro="Distribuidora Matute es una empresa familiar Ecuatoriana donde encontrarás todo tipo de bebidas." data-step="1">DISTRIBUIDORA<span> MATUTE</span></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -36,7 +36,7 @@
               <li class="nav-item">
                 <a class="nav-link active" href="index.html">Inicio</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" data-position="bottom" data-intro="Dentro de esta pestaña podrás conocer más acerca de la distribuidora, su historia, misión y visión." data-step="2">
                 <a class="nav-link" href="about.html">Nosotros</a>
               </li>
               <!--
@@ -48,10 +48,10 @@
                   <a class="dropdown-item" href="bsaborizadas.html">Bebidas saborizadas</a>
                 </div>
               -->
-              <li class="nav-item">
+              <li class="nav-item" data-position="bottom" data-intro="Aquí podrás conocer todos los productos que comercializa la distribuidora y así mismo realizar una compra del producto que desees." data-step="3">
                 <a class="nav-link" href="productos.html">Productos</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" data-position="bottom" data-intro="En este apartado te podrás comunicar directamente con el personal de la distribuidora en caso de tener alguna duda, queja, etc." data-step="4">
                 <a class="nav-link" href="contact.html">Contáctenos</a>
               </li>
 
@@ -64,7 +64,7 @@
     </header>
     <!-- END header -->
     
-    <section class="home-slider owl-carousel">
+    <section class="home-slider owl-carousel" >
       <div class="slider-item" style="background-image: url('images/agua.jpg');">
         
         <div class="container">
@@ -72,7 +72,7 @@
             <div class="col-md-8 text-center col-sm-12 element-animate">
               <h1>Distribuidora Matute</h1>
               <p class="mb-5">Somos proveedores de todo tipo de productos de consumo masivo y contamos con nuestra propia marca YAKU.</p>
-              <p><a href="#" class="btn btn-white btn-outline-white">Empecemos</a></p>
+              <p><a onclick="javascript:introJs().setOptions({ 'skipLabel': 'Saltar', 'nextLabel': 'Siguiente', 'prevLabel': 'Anterior', 'doneLabel': 'Finalizar'}).start();" class="btn btn-large btn-primary" href='javascript:void(0);' class="btn btn-white btn-outline-white">Empecemos</a></p>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@
             <div class="col-md-8 text-center col-sm-12 element-animate">
               <h1>YAKU</h1>
               <p class="mb-5">YAKU es una marca 100% ecuatoriana que ofrece productos para satisfacer las necesidades de nuestros consumidores. Mantenemos un proceso de filtración y purificación del agua para asegurar tu bienestar.</p>
-              <p><a href="#" class="btn btn-white btn-outline-white">Empecemos</a></p>
+              <p><a onclick="javascript:introJs().setOptions({ 'skipLabel': 'Saltar', 'nextLabel': 'Siguiente', 'prevLabel': 'Anterior', 'doneLabel': 'Finalizar'}).start();" class="btn btn-large btn-primary" href='javascript:void(0);' class="btn btn-white btn-outline-white">Empecemos</a></p>
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@
       </div>
         <div class="container">
           <div class="row">
-            <div class="major-caousel js-carousel-1 owl-carousel">
+            <div class="major-caousel js-carousel-1 owl-carousel" data-position="bottom" data-intro="Entre nuestros productos estrellas contamos con Yaku, agua purificada, producto 100% ecuatoriano, con los mejores estándares de calidad." data-step="5">
 
 				<a href="agua.html" class="item-class">
 			  	  <div class="text">
@@ -187,7 +187,7 @@
       <div class="container">
         <div class="row mb-5">
           
-          <div class="col-md-5 mb-5">
+          <div class="col-md-5 mb-5" data-position="top" data-intro="En esta sección contamos con los datos de la distribuidora." data-step="6">
             <h3>Información de contacto</h3>
             <ul class="list-unstyled footer-link">
               <li class="d-block">
@@ -209,7 +209,7 @@
           </div>
          <div class="col-md-4 mb-5">
             
-            <ul class="list-unstyled footer-link d-flex footer-social">
+            <ul class="list-unstyled footer-link d-flex footer-social" data-position="top" data-intro="Siguenos en nuestras redes sociales." data-step="7">
               <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
               <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
               <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
