@@ -1,4 +1,30 @@
 .inline-box{
-  display: block;
-  text-align: center;
+	float: left;
+	height:450px;
+	width: auto;
+	border: 1px solid
+	margin: 10px;
 }
+
+.mod-box{
+	height:450px;
+	width: auto;
+	border: 1px solid;
+	margin: 10px;
+	clear:both;
+	text-align:center;
+}
+body{
+	font-size:1.3em;
+}
+
+button{
+	font-size:0.7em;
+}
+h2{
+	text-align:center;
+}
+form{
+	text-align:center;
+	
+	}

@@ -2,9 +2,6 @@ html {
   overflow-x: hidden;
 }
 
-.mySlides {display:none}
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px;padding:0}
 
 body {
   background: #fff;
@@ -41,7 +38,6 @@ h1, h2, h3, h4, h5 {
 
 .inline-box{
   display: inline-block;
-  text-align: justify;
 }
 
 .btn, .form-control {
@@ -820,7 +816,7 @@ header .navbar .cta-btn a:hover {
 }
 
 .section {
-  padding: 0em 0;
+  padding: 7em 0;
 }
 
 .section-subscribe {
