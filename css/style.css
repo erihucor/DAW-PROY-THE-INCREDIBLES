@@ -1084,6 +1084,7 @@ header .navbar .cta-btn a:hover {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
+  height=400px
 }
 
 .media-custom:focus img, .media-custom:hover img {
