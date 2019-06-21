@@ -317,6 +317,11 @@ h1, h2, h3, h4, h5 {
   text-align: center;
 }
 
+.img-aumentada{
+  width: 25%;
+  height: 25%;
+}
+
 .inline-box{
   display: inline-block;
 }
@@ -676,7 +681,7 @@ header .navbar .cta-btn a:hover {
 }
 
 .heading-wrap h2 {
-  font-size: 50px;
+  font-size:25px;
   position: relative;
   padding-top: 30px;
   z-index: 2;
@@ -1373,6 +1378,7 @@ header .navbar .cta-btn a:hover {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
+  height=400px
 }
 
 .media-custom:focus img, .media-custom:hover img {
