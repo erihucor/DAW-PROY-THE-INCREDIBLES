@@ -18,14 +18,14 @@
     <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
 
-    <!-- Theme Style 
-    <link rel="stylesheet" href="css/style.css">
-    -->
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style-adm.css">
+    
 </head>
 
 <body>
     <div>
-        <div class="container-fluid text-center">
+        <div class="container-fluid jumbotron text-center">
             <div class="page-header">
                 <h1>Inventario Distribuidora Matute</h1>
             </div>
@@ -42,9 +42,16 @@
                 </div>
                 <div class="col-sm-10">
                     <div class="container-fluid">
-
-                        <h2>Hover Rows</h2>
-                        <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>
+                        <h2 class="m-5">Tabla de registros de ventas</h2>
+                        
+                        <div class="topnav">
+                            <div class="search-container">
+                                <form>
+                                    <input type="text" placeholder="Search.." name="search">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
                         <table class="table table-hover">
                             <thead>
                                 <tr>
@@ -57,27 +64,27 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>John</td>
-                                    <td>Doe</td>
+                                    <td>001</td>
+                                    <td>Karina Saylema</td>
                                     <td>john@example.com</td>
 
                                     <th><time>8 de octubre de 2012</time></th>
                                     <th><time>20 de octubre de 2012</time></th>
                                 </tr>
                                 <tr>
-                                    <td>Mary</td>
-                                    <td>Moe</td>
+                                    <td>002</td>
+                                    <td>Sarahi Silva</td>
                                     <td>mary@example.com</td>
 
                                     <th><time>24 de noviembre de 2012</time></th>
                                     <th><time>25 de noviembre de 2012</time></th>
                                 </tr>
                                 <tr>
-                                    <td>July</td>
-                                    <td>Dooley</td>
+                                    <td>003</td>
+                                    <td>Estefania Freire</td>
                                     <td>july@example.com</td>
-                                    
-                                    
+
+
                                     <th><time>27 de noviembre de 2012</time></th>
                                     <th><time>29 de noviembre de 2012</time></th>
                                 </tr>
@@ -101,4 +108,6 @@
     <footer>
         fooooooooooooooooooooooooorerrrrr
     </footer>
-</body></html>
+</body>
+
+</html>
