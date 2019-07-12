@@ -38,15 +38,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="about.html">Nosotros</a>
               </li>
-              <!--
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="productos.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="agua.html">Agua</a>
-                  <a class="dropdown-item" href="bernergeticas.html">Bebidas Energeticas</a>
-                  <a class="dropdown-item" href="bsaborizadas.html">Bebidas saborizadas</a>
-                </div>
-              -->
               <li class="nav-item">
                 <a class="nav-link" href="productos.html">Productos</a>
               </li>
@@ -85,6 +76,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12 text-center heading-wrap">
+              <a name="contactenos"></a>
               <h2>CONTÁCTANOS</h2>
               <span class="back-text3">CONTÁCTANOS</span>
             </div>
@@ -135,7 +127,7 @@
             <div class="col-md-8 mx-auto contact-form-contact-info">
               <h4 class="mb-5">Detalles del contacto</h4>
                 <p class="d-flex">
-                  <span class="ion-ios-location icon mr-5"></span>
+                  <a class="ion-ios-location icon mr-5" href="#mapa"></a>
                   <span>Nicasio Safadi mz j3 villa 20.</span>
                 </p>
 
@@ -145,30 +137,54 @@
                 </p>
 
                 <p class="d-flex">
-                  <span class="ion-android-mail icon mr-5"></span>
+                  <span class="ion-android-mail icon mr-5" href="#contactenos"></span>
                   <span>info@distribuidoramatute.com</span>
                 </p>
               </div>
 
           </div>
         </div>
+      	<div class="row">
+      		<div class="col-md-12 text-center">
+
+			<div class="clearfix mb-5 pb-5">
+			    <div class="container-fluid">
+			        <div class="row">
+			            <div class="col-md-12 text-center heading-wrap">
+                      <a name="mapa"></a>
+			                <h2>UBICACION</h2>
+			                <span class="back-text3">UBICACION</span>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d683.4184142594249!2d-79.88372810185487!3d-2.173002502973075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6dc8e97d96e9%3A0x6d5b903be5b6ea96!2sNicasio+Safadi%2C+Guayaquil+090514!5e0!3m2!1ses-419!2sec!4v1562890146205!5m2!1ses-419!2sec" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <div class="leyenda_mapa">
+
+        <p>Estamos ubicados en Nicasio Safadi Manzana j3,villa 20.</p>
+        <p> No dudes en <a href="#contactenos">contactarnos </a><a class="ion-android-mail icon" href="#contactenos">,</a> estamos para servirte!</p>
       </div>
+
+	  		</div>
+	  </div>
+	</div>
+	  
 
     </section>
 
-
-    <footer class="site-footer" role="contentinfo">
+      <footer class="site-footer" role="contentinfo">
       <div class="container">
         <div class="row mb-5">
           
-          <div class="col-md-5 mb-5">
+          <div class="col-md-5 mb-5" data-position="top" data-intro="En esta sección contamos con los datos de la distribuidora." data-step="6">
             <h3>Información de contacto</h3>
             <ul class="list-unstyled footer-link">
               <li class="d-block">
-                <span class="d-block">Dirección:</span>
-                <span class="text-white">Atarazana</span></li>
+                <a href="contact.html#mapa" class=" d-block">Dirección:</a>
+                <span class="text-white">Nicasio Safadi Manzana j3,villa 20</span></li>
               <li class="d-block"><span class="d-block">Teléfono:</span><span class="text-white">0986941859</span></li>
-              <li class="d-block"><span class="d-block">Email:</span><span class="text-white">info@distribuidoramatute.com</span></li>
+              <li class="d-block"><span class="d-block">Email:</span><span class="text-white">DistribuidoraMatute@hotmail.com</span></li>
             </ul>
           </div>
 
@@ -176,14 +192,14 @@
           <div class="col-md-3 mb-5">
             <h3></h3>
             <ul class="list-unstyled footer-link">
-              <li><a href="#">Nosotros</a></li>
+              <li><a href="about.html">Nosotros</a></li>
              
-              <li><a href="#">Contáctenos</a></li>
+              <li><a href="contact.html">Contáctenos</a></li>
             </ul>
           </div>
          <div class="col-md-4 mb-5">
             
-            <ul class="list-unstyled footer-link d-flex footer-social">
+            <ul class="list-unstyled footer-link d-flex footer-social" data-position="top" data-intro="Siguenos en nuestras redes sociales." data-step="7">
               <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
               <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
               <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
@@ -193,9 +209,12 @@
         </div>
         <div class="row">
           <div class="col-12 text-md-center text-left">
-            <p>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> <br> Demo Images Unsplash</p>
+          <p>&copy;
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>
+              document.write(new Date().getFullYear());
+              </script> All rights reserved
+          </p>
           </div>
         </div>
       </div>

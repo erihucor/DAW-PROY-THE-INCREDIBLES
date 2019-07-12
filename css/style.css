@@ -21,14 +21,16 @@ a {
 
 a:hover {
   text-decoration: none;
+  color:skyblue;
 }
 
 h1, h2, h3, h4, h5 {
   color: #000;
 }
 
-.imagen-p-agua{
-  text-align: center;
+div .leyenda_mapa {
+  margin-top :30px;
+  font-size: 20px;
 }
 
 .img-aumentada{
@@ -946,19 +948,26 @@ header .navbar .cta-btn a:hover {
   height: 50px !important;
 }
 
-.contact-form-contact-info p {
+.contact-form-contact-info p{
   margin-bottom: 30px;
   font-size: 20px;
   line-height: 1.5;
   color: #000;
 }
 
-.contact-form-contact-info p .icon {
+.contact-form-contact-info p .icon{
   top: -4px;
   position: relative;
   width: 0px;
   font-size: 30px;
   color: blue;/*sobreescrito*/
+}
+
+.leyenda_mapa a{
+  color: blue;
+}
+.leyenda_mapa p{
+  color: black;
 }
 
 .load-more {
