@@ -1504,3 +1504,14 @@ header .navbar .cta-btn a:hover {
     stroke-dashoffset: -136px;
   }
 }
+
+div#timeline{
+
+  height: 410px;
+	width: 220px;
+	overflow: auto;
+	border: 1px solid #666;
+	background-color: darkblue;
+	padding: 8px;
+
+}
