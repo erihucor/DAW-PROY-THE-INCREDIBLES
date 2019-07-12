@@ -58,6 +58,13 @@ div .leyenda_mapa {
  opacity: 0.9;
 
 }
+.integrantes img{
+  width: 220px;
+  height: 220px;
+ opacity: 0.9;
+
+}
+
 
 .buscador button {
   padding: 6px 10px;
