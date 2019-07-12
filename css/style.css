@@ -42,12 +42,30 @@ div .leyenda_mapa {
   display: inline-block;
 }
 
+.buscador input[type=text]{
+  padding: 6px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 17px;
+  border-color: blue;
+
+}
+
 .noticia img{
   width: 220px;
   height: 220px;
  border-radius: 90px;
  opacity: 0.9;
 
+}
+
+.buscador button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  background: blue;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
 }
 
 .eventos .mySlides img{
