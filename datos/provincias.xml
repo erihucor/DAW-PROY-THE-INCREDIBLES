@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provincias>
+<provincia><nombre>Azuay</nombre></provincia>
+<provincia><nombre>Bolivar</nombre></provincia>
+<provincia><nombre>Canar</nombre></provincia>
+<provincia><nombre>Carchi</nombre></provincia>
+<provincia><nombre>Chimborazo</nombre></provincia>
+<provincia><nombre>Cotopaxi</nombre></provincia>
+<provincia><nombre>El Oro</nombre></provincia>
+<provincia><nombre>Esmeraldas</nombre></provincia>
+<provincia><nombre>Galapagos</nombre></provincia>
+<provincia><nombre>Guayas</nombre></provincia>
+<provincia><nombre>Imbabura</nombre></provincia>
+<provincia><nombre>Loja</nombre></provincia>
+<provincia><nombre>Los Rios</nombre></provincia>
+<provincia><nombre>Manabi</nombre></provincia>
+<provincia><nombre>Morona Santiago</nombre></provincia>
+<provincia><nombre>Napo</nombre></provincia>
+<provincia><nombre>Orellana</nombre></provincia>
+<provincia><nombre>Pastaza</nombre></provincia>
+<provincia><nombre>Pichincha</nombre></provincia>
+<provincia><nombre>Santa Elena</nombre></provincia>
+<provincia><nombre>Santo Domingo de los Tsachilas</nombre></provincia>
+<provincia><nombre>Sucumbios</nombre></provincia>
+<provincia><nombre>Tungurahua</nombre></provincia>
+<provincia><nombre>Zamora Chinchipe</nombre></provincia>
+</provincias>

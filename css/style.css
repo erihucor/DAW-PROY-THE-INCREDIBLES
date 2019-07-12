@@ -42,6 +42,11 @@ div .leyenda_mapa {
   display: inline-block;
 }
 
+.btn .btn-primary .dropdown-toggle, .dropdown-show{
+    border-color: skyblue;
+  background: skyblue;
+}
+
 .btn, .form-control {
   outline: none;
   -webkit-box-shadow: none !important;
@@ -114,7 +119,7 @@ textarea.form-control {
 }
 
 .btn:hover {
-  text-decoration: none;
+  /*text-decoration: none;*/
 }
 
 /* Header */
