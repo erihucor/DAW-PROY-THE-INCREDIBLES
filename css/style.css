@@ -50,9 +50,13 @@ div .leyenda_mapa {
 
 }
 
+.eventos .mySlides img{
+    width: 500px;
+  height: 500px;
+}
+
 .noticia img:hover{
    transform:scale(1.2);
-   border-radius: 50px;
    opacity: 1;
 
 }
