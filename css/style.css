@@ -42,7 +42,10 @@ div .leyenda_mapa {
   display: inline-block;
 }
 
-.buscador input[type=text]{
+.btn btn-primary dropdown-toggle{
+  margin: 30px;
+}
+.buscador-input {
   padding: 6px;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -59,7 +62,7 @@ div .leyenda_mapa {
 
 }
 
-.buscador button {
+.boton-buscador {
   padding: 6px 10px;
   margin-top: 8px;
   background: blue;
