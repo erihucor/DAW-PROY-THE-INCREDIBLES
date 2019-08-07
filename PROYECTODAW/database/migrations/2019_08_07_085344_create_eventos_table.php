@@ -15,14 +15,16 @@ class CreateEventosTable extends Migration
     {
         Schema::create('eventos', function (Blueprint $table) {
             $table->bigIncrements('evento_id');
-            $table->string('titulo');
-            $table->string('descripcion');
-            $table->string('src_img');
-            $table->string('link');
-            $table->integer('usuario_id');
-            $table->foreign('usuario_id')->references('usuario_id')
-            ->on('estados')->onDelete('cascade');
+            $table->string('titulo',10);
+            $table->string('descripcion',20);
+            $table->string('src_imagen',20);
+            $table->string('link',20);
             $table->timestamps();
+
+            //Foreig key
+
+            $table->unsignedBigInteger('usuario_id');
+            $table->foreign('usuario_id')->references('usuario_id')->on('usuarios')->onDelete('cascade');
         });
     }
 

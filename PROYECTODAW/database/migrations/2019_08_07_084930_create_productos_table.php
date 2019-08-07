@@ -15,17 +15,18 @@ class CreateProductosTable extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->bigIncrements('producto_id');
-            $table->string('nombreProducto');
-            $table->float('precio');       
+            $table->string('nombreProducto',20);
+            $table->float('precio');
             $table->integer('cantidad');
-            $table->integer('categoria_id');
-            $table->foreign('categoria_id')->references('categoria_id')
-            ->on('categorias')->onDelete('cascade');
-            $table->integer('estado_id');
-            $table->foreign('estado_id')->references('estado_id')
-            ->on('estados')->onDelete('cascade');
-
             $table->timestamps();
+
+            //Claves foraneas
+
+            $table->unsignedBigInteger('categoria_id');
+			$table->foreign('categoria_id')->references('categoria_id')->on('categorias')->onDelete('cascade');
+
+            $table->unsignedBigInteger('estado_id');
+			$table->foreign('estado_id')->references('estado_id')->on('estados')->onDelete('cascade');
         });
     }
 

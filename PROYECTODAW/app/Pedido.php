@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class categorias extends Model
+class Pedido extends Model
 {
     //
 }

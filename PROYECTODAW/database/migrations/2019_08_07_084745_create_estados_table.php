@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEstadoPedidosTable extends Migration
+class CreateEstadosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateEstadoPedidosTable extends Migration
      */
     public function up()
     {
-        Schema::create('estado_pedidos', function (Blueprint $table) {
-            $table->bigIncrements('estadopedido_id');
-            $table->string('estadopedido');
-
+        Schema::create('estados', function (Blueprint $table) {
+            $table->bigIncrements('estado_id');
+            $table->string('estado',10);
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateEstadoPedidosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('estado_pedidos');
+        Schema::dropIfExists('estados');
     }
 }

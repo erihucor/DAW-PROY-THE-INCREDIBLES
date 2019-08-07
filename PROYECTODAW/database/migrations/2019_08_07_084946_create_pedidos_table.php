@@ -15,15 +15,15 @@ class CreatePedidosTable extends Migration
     {
         Schema::create('pedidos', function (Blueprint $table) {
             $table->bigIncrements('pedido_id');
-            
-            $table->integer('usuario_id');
-            $table->foreign('usuario_id')->references('usuario_id')
-            ->on('usuarios')->onDelete('cascade');
-            $table->integer('estadopedido_id');
-            $table->foreign('estadopedido_id')->references('estadopedido_id')
-            ->on('estadoPedido')->onDelete('cascade');
-            
             $table->timestamps();
+
+            //Claves foraneas
+
+            $table->unsignedBigInteger('usuario_id');
+            $table->foreign('usuario_id')->references('usuario_id')->on('usuarios')->onDelete('cascade');
+
+            $table->unsignedBigInteger('estadoPedido_id');
+            $table->foreign('estadoPedido_id')->references('estadoPedido_id')->on('estadosPedidos')->onDelete('cascade');
         });
     }
 

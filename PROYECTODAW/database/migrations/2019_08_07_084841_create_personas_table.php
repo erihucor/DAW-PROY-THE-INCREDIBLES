@@ -14,13 +14,13 @@ class CreatePersonasTable extends Migration
     public function up()
     {
         Schema::create('personas', function (Blueprint $table) {
-            $table->bigIncrements('ci');
-            $table->string('nombre');
-            $table->string('apellido');
-            $table->date('fechadenacimiento');
-            $table->string('direccion');
-            $table->string('telefono');
-            $table->string('email');
+            $table->string('ci',10)->primary();
+            $table->string('nombre',20);
+            $table->string('apellido',20);
+            $table->date('fechaDeNacimiento');
+            $table->string('direccion',30);
+            $table->string('telefono',20);
+            $table->string('e-mail',30);
             $table->timestamps();
         });
     }

@@ -15,13 +15,16 @@ class CreateNoticiasTable extends Migration
     {
         Schema::create('noticias', function (Blueprint $table) {
             $table->bigIncrements('noticia_id');
-            $table->string('titulo');
-            $table->string('descripcion');
-            $table->string('src_img');
-            $table->integer('usuario_id');
-            $table->foreign('usuario_id')->references('usuario_id')
-            ->on('estados')->onDelete('cascade');
             $table->timestamps();
+
+            $table->string('titulo',10);
+            $table->string('descripcion',20);
+            $table->string('src_imagen',20);
+
+            //Foreig key
+
+            $table->unsignedBigInteger('usuario_id');
+            $table->foreign('usuario_id')->references('usuario_id')->on('usuarios')->onDelete('cascade');
         });
     }
 
