@@ -14,7 +14,7 @@ class PedidoDetalleController extends Controller
      */
     public function index()
     {
-        //
+        return PedidoDetalle::all();
     }
 
     /**
@@ -35,27 +35,35 @@ class PedidoDetalleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return PedidoDetalle::create($request->all());
+        /*
+        $persona = new Persona;
+        $persona->nombre = $request->nombre;
+        $persona->save();
+        */
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\PedidoDetalle  $pedidoDetalle
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function show(PedidoDetalle $pedidoDetalle)
+    public function show($id)
     {
-        //
+        //Solicitamos al modelo el Pokemon con el id solicitado por GET.
+        //return Persona::where('id', $id)->get();
+        return PedidoDetalle::find($id);
     }
+
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\PedidoDetalle  $pedidoDetalle
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function edit(PedidoDetalle $pedidoDetalle)
+    public function edit(persona $persona)
     {
         //
     }
@@ -64,22 +72,27 @@ class PedidoDetalleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\PedidoDetalle  $pedidoDetalle
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PedidoDetalle $pedidoDetalle)
+    public function update(Request $request,$id)
     {
-        //
+        $pedidoDetalle = PedidoDetalle::findOrFail($id);
+        $pedidoDetalle->update($request->all());
+        return $pedidoDetalle;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\PedidoDetalle  $pedidoDetalle
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PedidoDetalle $pedidoDetalle)
+    public function destroy(Request $request, $id)
     {
-        //
+        $pedidoDetalle = PedidoDetalle::findOrFail($id);
+        $pedidoDetalle->delete();
+        return 204;
     }
+
 }

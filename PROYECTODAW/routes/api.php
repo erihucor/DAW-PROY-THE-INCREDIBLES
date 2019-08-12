@@ -16,3 +16,14 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::apiResource('categorias', 'CategoriaController');
+Route::apiResource('estados', 'EstadoController');
+Route::apiResource('estadoPedidos', 'EstadoPedidoController');
+Route::apiResource('eventos', 'EventoController');
+Route::apiResource('noticias', 'NoticiaController');
+Route::apiResource('pedidos', 'PedidoController');
+Route::apiResource('pedidoDetalles', 'PedidoDetalleController');
+Route::apiResource('personas', 'PersonaController');
+Route::apiResource('productos', 'ProductoController');
+Route::apiResource('roles', 'RolController');
+Route::apiResource('usuarios', 'UsuarioController');

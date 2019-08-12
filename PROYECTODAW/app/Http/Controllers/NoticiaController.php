@@ -14,7 +14,7 @@ class NoticiaController extends Controller
      */
     public function index()
     {
-        //
+        return Noticia::all();
     }
 
     /**
@@ -35,27 +35,35 @@ class NoticiaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Noticia::create($request->all());
+        /*
+        $persona = new Persona;
+        $persona->nombre = $request->nombre;
+        $persona->save();
+        */
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Noticia  $noticia
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function show(Noticia $noticia)
+    public function show($id)
     {
-        //
+        //Solicitamos al modelo el Pokemon con el id solicitado por GET.
+        //return Persona::where('id', $id)->get();
+        return Noticia::find($id);
     }
+
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Noticia  $noticia
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function edit(Noticia $noticia)
+    public function edit(persona $persona)
     {
         //
     }
@@ -64,22 +72,27 @@ class NoticiaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Noticia  $noticia
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Noticia $noticia)
+    public function update(Request $request,$id)
     {
-        //
+        $noticia = Noticia::findOrFail($id);
+        $noticia->update($request->all());
+        return $noticia;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Noticia  $noticia
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Noticia $noticia)
+    public function destroy(Request $request, $id)
     {
-        //
+        $noticia = Noticia::findOrFail($id);
+        $noticia->delete();
+        return 204;
     }
+
 }

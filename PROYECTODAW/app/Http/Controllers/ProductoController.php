@@ -6,7 +6,6 @@ use App\Producto;
 use Illuminate\Http\Request;
 
 class ProductoController extends Controller
-{
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +13,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+        return Producto::all();
     }
 
     /**
@@ -35,27 +34,35 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Producto::create($request->all());
+        /*
+        $persona = new Persona;
+        $persona->nombre = $request->nombre;
+        $persona->save();
+        */
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Producto  $producto
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function show(Producto $producto)
+    public function show($id)
     {
-        //
+        //Solicitamos al modelo el Pokemon con el id solicitado por GET.
+        //return Persona::where('id', $id)->get();
+        return Producto::find($id);
     }
+
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Producto  $producto
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function edit(Producto $producto)
+    public function edit(persona $persona)
     {
         //
     }
@@ -64,22 +71,27 @@ class ProductoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Producto  $producto
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Producto $producto)
+    public function update(Request $request,$id)
     {
-        //
+        $producto = Producto::findOrFail($id);
+        $producto->update($request->all());
+        return $producto;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Producto  $producto
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Producto $producto)
+    public function destroy(Request $request, $id)
     {
-        //
+        $producto = Producto::findOrFail($id);
+        $producto->delete();
+        return 204;
     }
+
 }

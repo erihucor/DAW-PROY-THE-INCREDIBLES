@@ -14,7 +14,7 @@ class RolController extends Controller
      */
     public function index()
     {
-        //
+        return Rol::all();
     }
 
     /**
@@ -35,27 +35,35 @@ class RolController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Rol::create($request->all());
+        /*
+        $persona = new Persona;
+        $persona->nombre = $request->nombre;
+        $persona->save();
+        */
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Rol  $rol
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function show(Rol $rol)
+    public function show($id)
     {
-        //
+        //Solicitamos al modelo el Pokemon con el id solicitado por GET.
+        //return Persona::where('id', $id)->get();
+        return Rol::find($id);
     }
+
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Rol  $rol
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function edit(Rol $rol)
+    public function edit(persona $persona)
     {
         //
     }
@@ -64,22 +72,27 @@ class RolController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Rol  $rol
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Rol $rol)
+    public function update(Request $request,$id)
     {
-        //
+        $rol = Rol::findOrFail($id);
+        $rol->update($request->all());
+        return $rol;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Rol  $rol
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Rol $rol)
+    public function destroy(Request $request, $id)
     {
-        //
+        $rol = Rol::findOrFail($id);
+        $rol->delete();
+        return 204;
     }
+
 }

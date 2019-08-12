@@ -14,7 +14,7 @@ class EventoController extends Controller
      */
     public function index()
     {
-        //
+        return Evento::all();
     }
 
     /**
@@ -35,27 +35,35 @@ class EventoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Evento::create($request->all());
+        /*
+        $persona = new Persona;
+        $persona->nombre = $request->nombre;
+        $persona->save();
+        */
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Evento  $evento
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function show(Evento $evento)
+    public function show($id)
     {
-        //
+        //Solicitamos al modelo el Pokemon con el id solicitado por GET.
+        //return Persona::where('id', $id)->get();
+        return Evento::find($id);
     }
+
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Evento  $evento
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function edit(Evento $evento)
+    public function edit(persona $persona)
     {
         //
     }
@@ -64,22 +72,27 @@ class EventoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Evento  $evento
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Evento $evento)
+    public function update(Request $request,$id)
     {
-        //
+        $evento = Evento::findOrFail($id);
+        $evento->update($request->all());
+        return $evento;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Evento  $evento
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Evento $evento)
+    public function destroy(Request $request, $id)
     {
-        //
+        $evento = Evento::findOrFail($id);
+        $evento->delete();
+        return 204;
     }
+
 }

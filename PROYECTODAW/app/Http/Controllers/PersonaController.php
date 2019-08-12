@@ -14,7 +14,7 @@ class PersonaController extends Controller
      */
     public function index()
     {
-        //
+        return Persona::all();
     }
 
     /**
@@ -35,27 +35,35 @@ class PersonaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Persona::create($request->all());
+        /*
+        $persona = new Persona;
+        $persona->nombre = $request->nombre;
+        $persona->save();
+        */
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Persona  $persona
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function show(Persona $persona)
+    public function show($id)
     {
-        //
+        //Solicitamos al modelo el Pokemon con el id solicitado por GET.
+        //return Persona::where('id', $id)->get();
+        return Persona::find($id);
     }
+
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Persona  $persona
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function edit(Persona $persona)
+    public function edit(persona $persona)
     {
         //
     }
@@ -64,22 +72,27 @@ class PersonaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Persona  $persona
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Persona $persona)
+    public function update(Request $request,$id)
     {
-        //
+        $persona = Persona::findOrFail($id);
+        $persona->update($request->all());
+        return $persona;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Persona  $persona
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Persona $persona)
+    public function destroy(Request $request, $id)
     {
-        //
+        $persona = Persona::findOrFail($id);
+        $persona->delete();
+        return 204;
     }
+
 }

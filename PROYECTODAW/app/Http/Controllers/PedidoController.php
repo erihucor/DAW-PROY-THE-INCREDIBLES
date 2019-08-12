@@ -14,7 +14,7 @@ class PedidoController extends Controller
      */
     public function index()
     {
-        //
+        return Pedido::all();
     }
 
     /**
@@ -35,27 +35,35 @@ class PedidoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Pedido::create($request->all());
+        /*
+        $persona = new Persona;
+        $persona->nombre = $request->nombre;
+        $persona->save();
+        */
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Pedido  $pedido
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function show(Pedido $pedido)
+    public function show($id)
     {
-        //
+        //Solicitamos al modelo el Pokemon con el id solicitado por GET.
+        //return Persona::where('id', $id)->get();
+        return Pedido::find($id);
     }
+
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Pedido  $pedido
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pedido $pedido)
+    public function edit(persona $persona)
     {
         //
     }
@@ -64,22 +72,27 @@ class PedidoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Pedido  $pedido
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pedido $pedido)
+    public function update(Request $request,$id)
     {
-        //
+        $pedido = Pedido::findOrFail($id);
+        $pedido->update($request->all());
+        return $pedido;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Pedido  $pedido
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pedido $pedido)
+    public function destroy(Request $request, $id)
     {
-        //
+        $pedido = Pedido::findOrFail($id);
+        $pedido->delete();
+        return 204;
     }
+
 }

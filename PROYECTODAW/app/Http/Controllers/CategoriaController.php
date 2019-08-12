@@ -14,7 +14,7 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        //
+        return Categoria::all();
     }
 
     /**
@@ -35,27 +35,35 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Categoria::create($request->all());
+        /*
+        $persona = new Persona;
+        $persona->nombre = $request->nombre;
+        $persona->save();
+        */
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Categoria  $categoria
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function show(Categoria $categoria)
+    public function show($id)
     {
-        //
+        //Solicitamos al modelo el Pokemon con el id solicitado por GET.
+        //return Persona::where('id', $id)->get();
+        return Categoria::find($id);
     }
+
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Categoria  $categoria
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function edit(Categoria $categoria)
+    public function edit(persona $persona)
     {
         //
     }
@@ -64,22 +72,26 @@ class CategoriaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Categoria  $categoria
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Categoria $categoria)
+    public function update(Request $request,$id)
     {
-        //
+        $categoria = Categoria::findOrFail($id);
+        $categoria->update($request->all());
+        return $categoria;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Categoria  $categoria
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Categoria $categoria)
+    public function destroy(Request $request, $id)
     {
-        //
+        $categoria = Categoria::findOrFail($id);
+        $categoria->delete();
+        return 204;
     }
 }

@@ -14,7 +14,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        //
+        return Usuario::all();
     }
 
     /**
@@ -35,27 +35,35 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Usuario::create($request->all());
+        /*
+        $persona = new Persona;
+        $persona->nombre = $request->nombre;
+        $persona->save();
+        */
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Usuario  $usuario
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function show(Usuario $usuario)
+    public function show($id)
     {
-        //
+        //Solicitamos al modelo el Pokemon con el id solicitado por GET.
+        //return Persona::where('id', $id)->get();
+        return Usuario::find($id);
     }
+
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Usuario  $usuario
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function edit(Usuario $usuario)
+    public function edit(persona $persona)
     {
         //
     }
@@ -64,22 +72,27 @@ class UsuarioController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Usuario  $usuario
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Usuario $usuario)
+    public function update(Request $request,$id)
     {
-        //
+        $usuario = Usuario::findOrFail($id);
+        $usuario->update($request->all());
+        return $usuario;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Usuario  $usuario
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Usuario $usuario)
+    public function destroy(Request $request, $id)
     {
-        //
+        $usuario = Usuario::findOrFail($id);
+        $usuario->delete();
+        return 204;
     }
+
 }

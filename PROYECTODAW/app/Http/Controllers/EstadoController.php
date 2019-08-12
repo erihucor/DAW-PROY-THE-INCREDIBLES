@@ -14,7 +14,7 @@ class EstadoController extends Controller
      */
     public function index()
     {
-        //
+        return Estado::all();
     }
 
     /**
@@ -35,27 +35,35 @@ class EstadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Estado::create($request->all());
+        /*
+        $persona = new Persona;
+        $persona->nombre = $request->nombre;
+        $persona->save();
+        */
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Estado  $estado
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function show(Estado $estado)
+    public function show($id)
     {
-        //
+        //Solicitamos al modelo el Pokemon con el id solicitado por GET.
+        //return Persona::where('id', $id)->get();
+        return Estado::find($id);
     }
+
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Estado  $estado
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function edit(Estado $estado)
+    public function edit(persona $persona)
     {
         //
     }
@@ -64,22 +72,27 @@ class EstadoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Estado  $estado
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Estado $estado)
+    public function update(Request $request,$id)
     {
-        //
+        $estado = Estado::findOrFail($id);
+        $estado->update($request->all());
+        return $estado;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Estado  $estado
+     * @param  \App\persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Estado $estado)
+    public function destroy(Request $request, $id)
     {
-        //
+        $estado = Estado::findOrFail($id);
+        $estado->delete();
+        return 204;
     }
+
 }
