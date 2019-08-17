@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function(){
+		return view('welcome');
+		}
+	);
+Route::get('addUsuario','UsuarioController@create');
+Route::get('addPersona','PersonaController@create');
+Route::get('addPedido','PedidoController@create');
+Route::get('addProducto','ProductoController@create');
