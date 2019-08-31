@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+            protected $fillable = ['user','password','rol_id','estado_id','ci'];
     ];
 
     /**
@@ -36,4 +36,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+	
+	/*Relaciones entre modelos*/
+	
+	public function roles(){
+		return $this->hasOne('Rol');
+	}
+	
+	public function estados(){
+		return $this->hasOne('Estado');
+	}
+	
+	public function personas(){
+		return $this->hasOne('Persona');
+	}
 }
