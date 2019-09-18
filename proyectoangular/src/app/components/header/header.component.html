@@ -1,0 +1,35 @@
+<header role="banner">
+      
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container" >
+        <div id="logo"><img src="assets/images/logo.PNG" width="150" height="150"></div>
+        <a class="navbar-brand" [routerLink]="['principal']" data-position="bottom" data-intro="Distribuidora Matute es una empresa familiar ecuatoriana que cuenta con propia marca de agua YAKU." data-step="1"><!--DISTRIBUIDORA MATUTE<span> </span> --></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+          <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+
+            <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link" [routerLink]="['principal']">Inicio</a>
+            </li>
+
+            <li class="nav-item" routerLinkActive="active" data-position="bottom" data-intro="Dentro de esta pestaña podrás conocer más acerca de la distribuidora, su historia, misión y visión." data-step="2">
+              <a class="nav-link" [routerLink]="['about']">Nosotros</a>
+            </li>
+
+            <li class="nav-item" routerLinkActive="active" data-position="bottom" data-intro="Aquí podrás conocer todos los productos que comercializa la distribuidora y pedir más información del producto que desees." data-step="3">
+              <a class="nav-link" [routerLink]="['productos']">Productos</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active" data-position="bottom" data-intro="Aquí te podrás comunicar directamente con el personal de la distribuidora en caso de tener alguna duda, queja, etc." data-step="4">
+              <a class="nav-link" [routerLink]="['contacto']">Contáctenos</a>
+            </li>
+
+          </ul>
+
+          
+        </div>
+      </div>
+    </nav>
+  </header>
